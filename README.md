@@ -1,4 +1,4 @@
-# PowerShell Environment Variable Management
+# PowerShell Command Management
 
 This repository provides a PowerShell script and command to add a new environment variable.
 
