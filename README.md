@@ -11,11 +11,12 @@ This repository provides a PowerShell script and command to add a new environmen
 3. **Load the Function** by running the following command:
 
    ```powershell
-   . .\CreateEnv.ps1
+   . .\Powershells.ps1
    ```
 4. **Use the Function** by running the following command:
 
     ```powershell
     CreateEnv -VariableName "API_KEY" -VariableValue "my-api-key-123"
+    List-EnvironmentVariables
     ```
  
