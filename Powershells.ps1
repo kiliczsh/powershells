@@ -15,11 +15,21 @@ function CreateEnv {
     }
 }
 
-function List-EnvironmentVariables {
+function ListEnv {
     $envVariables = [Environment]::GetEnvironmentVariables("User")
     
     Write-Host "List of Environment Variables:"
     foreach ($variable in $envVariables.GetEnumerator()) {
         Write-Host "$($variable.Key) = $($variable.Value)"
+    }
+}
+
+function EditPowershellProfile {
+    $profilePath = $profile
+
+    if (Test-Path $profilePath) {
+        Start-Process "code" $profilePath
+    } else {
+        Write-Host "PowerShell profile not found."
     }
 }
