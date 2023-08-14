@@ -14,3 +14,12 @@ function CreateEnv {
         Write-Host "Environment variable '$VariableName' added with value '$VariableValue'."
     }
 }
+
+function List-EnvironmentVariables {
+    $envVariables = [Environment]::GetEnvironmentVariables("User")
+    
+    Write-Host "List of Environment Variables:"
+    foreach ($variable in $envVariables.GetEnumerator()) {
+        Write-Host "$($variable.Key) = $($variable.Value)"
+    }
+}
